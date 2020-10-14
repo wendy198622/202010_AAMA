@@ -46,36 +46,36 @@ h6 {
   margin: 0;
   color: #111111;
   font-weight: 400;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 64px;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 42px;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 36px;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 p {
-  font-size: 15px;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   color: #000000;
   font-weight: 400;
   line-height: 26px;
@@ -129,7 +129,6 @@ ol {
 .section-title h2 {
   color: #111111;
   font-weight: 800;
-  font-style: italic;
   text-transform: uppercase;
 }
 
@@ -163,10 +162,11 @@ ol {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 14px 30px;
+  padding: 10px 30px;
   color: #ffffff;
   background: #0086D1;
   letter-spacing: 1px;
+  margin-top: 10px;
 }
 
 .primary-btn.second-bg {
@@ -604,7 +604,6 @@ ol {
   padding-top: 0;
   -webkit-clip-path: none;
   clip-path: none;
-  background: transparent;
   padding-bottom: 90px;
 }
 
@@ -766,6 +765,7 @@ ol {
 -----------------------*/
 .pricing {
   padding-bottom: 70px;
+  background: #333333;
 }
 
 .pricing.pricing--page .section-title h2 {
@@ -809,32 +809,20 @@ ol {
 }
 
 .pricing__item {
-  background: rgba(12, 43, 75, 0.3);
+  background: #F5A223;
   text-align: center;
-  padding: 40px 35px 35px;
+  padding: 20px;
   margin-bottom: 40px;
-  -webkit-transition: all, 0.5s;
-  transition: all, 0.5s;
-}
-
-.pricing__item:hover {
-  background: #0c2b4b;
-}
-
-.pricing__item:hover .pricing__item__title {
-  border-bottom: 1px solid rgba(225, 225, 225, 0.1);
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 100%;
 }
 
 .pricing__item:hover .primary-btn {
   background: #0086D1;
-}
-
-.pricing__item .pricing__item__title {
-  border-bottom: 1px solid rgba(225, 225, 225, 0.2);
-  padding-bottom: 45px;
-  margin-bottom: 25px;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
 }
 
 .pricing__item .pricing__item__title span {
@@ -1000,18 +988,15 @@ ol {
 -----------------------*/
 .footer {
   padding-top: 70px;
-  background: #F5A223;
+  background: #333333;
 }
 
 .footer__widget {
-  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
-.footer__widget h5 {
-  color: #ffffff;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 24px;
+.footer__widget a {
+  margin-left: 10px;
 }
 
 .footer__widget ul li {
@@ -1030,7 +1015,7 @@ ol {
 
 .footer__about p {
   color: #c4c4c4;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .footer__about ul li {
@@ -1038,10 +1023,6 @@ ol {
   color: #c4c4c4;
   font-size: 15px;
   line-height: 36px;
-}
-
-.footer__logo {
-  margin-bottom: 30px;
 }
 
 .footer__logo a {
@@ -1236,7 +1217,21 @@ ol {
 }
 
 .feature__text .section-title {
-  margin-bottom: 20px;
+  padding: 0 0 50px;
+  position: relative;
+  text-align: center;
+}
+
+.feature__text .section-title:after {
+  content: "";
+  width: 100px;
+  height: 10px;
+  background: #F5A223;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .feature__text p {
@@ -1244,7 +1239,7 @@ ol {
 }
 
 .feature__item {
-  background: #F5A223;
+  background: #0086D1;
   text-align: center;
   padding: 40px 10px 35px;
   margin-bottom: 30px;

@@ -6,3 +6,7 @@
     -o-transition: $args;
     transition: $args;
 }
+// border-radius
+@mixin border-radius($bdr...) {
+    border-radius: $bdr;
+}

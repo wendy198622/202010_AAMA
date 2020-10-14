@@ -4,18 +4,21 @@
 .footer {
   padding-top: 70px;
   // margin-top: 70px;
-  background: $secondary-color;
+  background: $heading-color-2;
 }
 
 .footer__widget {
-  margin-bottom: 30px;
+  margin-top: 20px;
 
-  h5 {
-    color: $white-color;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 24px;
+  a{
+    margin-left: 10px;
   }
+  // h5 {
+  //   color: $white-color;
+  //   font-weight: 700;
+  //   text-transform: uppercase;
+  //   margin-bottom: 24px;
+  // }
 
   ul {
 
@@ -36,7 +39,7 @@
 
   p {
     color: #c4c4c4;
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   ul {
@@ -51,7 +54,7 @@
 }
 
 .footer__logo {
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   
   a {
     display: inline-block;
