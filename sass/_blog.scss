@@ -62,6 +62,8 @@
                     display: none;
                 }
             }
+
+            i{ margin-right: 5px;}
         }
     }
 
@@ -80,7 +82,12 @@
         position: relative;
         padding: 0 0 6px;
         letter-spacing: 1px;
-        border-bottom: 2px solid #f3bd00;
+        border-bottom: 2px solid #F5A223;
+        @include transition(all .3s);
+
+        &:hover{
+            color: #F5A223;
+        }
     }
 }
 

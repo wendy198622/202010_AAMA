@@ -57,7 +57,7 @@ h1 {
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 48px;
 }
 
 h3 {
@@ -112,7 +112,19 @@ ol {
   Helper CSS
 -----------------------*/
 .section-title {
-  margin-bottom: 45px;
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+
+  &:after{
+    content: "";
+    width: 100px;
+    height: 10px;
+    background: $secondary-color;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   &.center-title {
     text-align: center;
@@ -127,9 +139,9 @@ ol {
     margin-bottom: 6px;
   }
 
-  h2 {
+  h3 {
     color: $heading-color;
-    font-weight: 800;
+    font-weight: 700;
     // font-style: italic;
     text-transform: uppercase;
   }
@@ -142,7 +154,7 @@ ol {
 }
 
 .spad {
-  padding-top: 100px;
+  // padding-top: 100px;
   padding-bottom: 100px;
 }
 
@@ -170,9 +182,15 @@ ol {
   background: $primary-color;
   letter-spacing: 1px;
   margin-top: 10px;
+  @include transition(all, .3s);
 
   &.second-bg {
     background: $secondary-color;
+  }
+
+  &:hover{
+    -webkit-filter: brightness(60%);
+    filter: brightness(60%);
   }
 }
 .site-btn {

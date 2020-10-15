@@ -1,17 +1,26 @@
 /*---------------------
   About Video
 -----------------------*/
-.about-video {
+.about-video, .about-blog {
   position: relative;
   z-index: 1;
 }
-
-.about__video__bg {
-  height: 390px;
+.about-blog{
+  margin-top: 50px;
+}
+.about__video__bg, .about__blog__bg {
+  width: 100%;
+  height: 0;
+  padding-bottom: calc(383/683*100%);
   display: flex;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
+  border: 1px solid #e1e1e1;
 
+  iframe{
+    width: 100%;
+    height: 383px;
+  }
   .play-btn {
     display: inline-block;
     font-size: 14px;
@@ -24,19 +33,53 @@
     line-height: 50px;
   }
 }
-
-.about__video__text {
+.about__video__bg{
+  border-right: 0;
+}
+.about__blog__bg{
+  border-left: 0;
+}
+.about__video__text, .about__blog__text {
   border: 1px solid #e1e1e1;
-  padding: 70px 50px 70px 65px;
-  height: 390px;
+  padding: 60px 50px 60px 65px;
+  height: 385px;
   background: $white-color;
 
-  .section-title {
-    margin-bottom: 20px;
+  .blog__large__text{
+    padding: 0;
+  }
+  
+  .tag{
+    background: $primary-color;
+    color: $white-color;
+    display: inline-block;
+    font-size: 14px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+  }
+
+  h5{
+    font-weight: 600;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    text-align: justify;
   }
 
   p {
-    margin-bottom: 26px;
+    margin: 26px 0;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    text-align: justify;
   }
 }
 
@@ -76,7 +119,7 @@
           color: #0071e4;
         }
 
-        h2 {
+        h3 {
           color: $heading-color;
         }
       }
@@ -120,7 +163,7 @@
         color: $white-color;
       }
 
-      h2 {
+      h3 {
         color: $white-color;
       }
     }
@@ -154,7 +197,7 @@
 
   form {
 
-    input {
+    input, textarea {
       width: 100%;
       height: 50px;
       border: 1px solid #e1e1e1;
@@ -167,6 +210,10 @@
       &::placeholder {
         color: #444444;
       }
+    }
+    textarea{
+      height: 100px;
+      padding: 10px 20px;
     }
 
     .nice-select {
@@ -205,15 +252,15 @@
   Pricing
 -----------------------*/
 .pricing {
-  padding-bottom: 70px;
-  background: #333333;
+  // padding-bottom: 70px;
+  background: #efefef;
 
   &.pricing--page {
 
     .section-title {
 
-      h2 {
-        color: $heading-color;
+      h3 {
+        // color: $heading-color;
       }
     }
 
@@ -264,8 +311,8 @@
 
   .section-title {
 
-    h2 {
-      color: $white-color;
+    h3 {
+      // color: $white-color;
     }
   }
 }
@@ -275,30 +322,42 @@
   text-align: center;
   padding: 20px;
   margin-bottom: 40px;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
+  width: 240px;
+  height: 240px;
   box-sizing: border-box;
-  // @include transition(all, .5s);
+  position: relative;
+  // margin-top: 45px;
   @include border-radius(100%);
 
-  &:hover {
-    // background: rgba(12, 43, 75, 1);
+  // &:hover {
+  //   background: rgba(12, 43, 75, 1);
 
-    .pricing__item__title {
-      // border-bottom: 1px solid rgba(225, 225, 225, 0.1);
-    }
+  //   .pricing__item__title {
+  //     border-bottom: 1px solid rgba(225, 225, 225, 0.1);
+  //   }
 
-    .primary-btn {
-      background: $primary-color;
-    }
+  //   .primary-btn {
+  //     background: $primary-color;
+  //   }
+  // }
+
+  &:before{
+    content: "";
+    width: 0;
+    height: 100%;
+    // position: absolute;
+    display: inline-block;
+    vertical-align: middle;
   }
-
+  
   .pricing__item__title {
     // border-bottom: 1px solid rgba(225, 225, 225, 0.2);
     // padding-bottom: 45px;
     // margin-bottom: 25px;
     // @include transition(all, .3s);
+    width: calc( 100% - 4px );
+    display: inline-block;
+    vertical-align: middle;
 
     span {
       font-size: 14px;
@@ -310,13 +369,13 @@
 
     h2 {
       font-size: 50px;
-      color: $primary-color;
+      color: $white-color;
       font-weight: 700;
       margin-top: 4px;
       margin-bottom: 18px;
     }
 
-    h5 {
+    h6 {
       color: $white-color;
       font-weight: 700;
       text-transform: uppercase;

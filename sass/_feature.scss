@@ -28,19 +28,9 @@
 
   .section-title {
     // margin-bottom: 20px;
-    padding: 0 0 50px;
-    position: relative;
+    // padding: 0 0 50px;
+    // position: relative;
     text-align: center;
-    &:after{
-      content: "";
-      width: 100px;
-      height: 10px;
-      background: $secondary-color;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
   }
 
   p {
@@ -57,7 +47,7 @@
   &.right-column {
     margin-top: 120px;
   }
-
+  
   h5 {
     font-weight: 700;
     text-transform: uppercase;
