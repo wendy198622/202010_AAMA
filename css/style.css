@@ -47,6 +47,7 @@ h6 {
   color: #111111;
   font-weight: 400;
   font-family: 'Noto Sans TC', 'Roboto', sans-serif;
+  line-height: 1.4;
 }
 
 h1 {
@@ -910,16 +911,9 @@ ol {
 }
 
 .pricing__item {
-  background: #F5A223;
   text-align: center;
-  padding: 20px;
   margin-bottom: 40px;
-  width: 240px;
-  height: 240px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   position: relative;
-  border-radius: 100%;
 }
 
 .pricing__item:before {
@@ -946,17 +940,36 @@ ol {
 }
 
 .pricing__item .pricing__item__title h2 {
-  font-size: 50px;
-  color: #ffffff;
-  font-weight: 700;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.pricing__item .pricing__item__title h2 .countBox {
+  line-height: 120px;
   margin-top: 4px;
   margin-bottom: 18px;
+  background: url(../img/count_bg.svg) center center no-repeat;
+  background-size: contain;
+}
+
+.pricing__item .pricing__item__title h2 .countBox .counter {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.pricing__item .pricing__item__title h2 .countBox span {
+  margin-left: 2px;
+  font-size: 16px;
 }
 
 .pricing__item .pricing__item__title h6 {
-  color: #ffffff;
+  color: #333333;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 40px;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
 }
@@ -1340,10 +1353,6 @@ ol {
   text-align: center;
   padding: 40px 10px 35px;
   margin-bottom: 30px;
-}
-
-.feature__item.right-column {
-  margin-top: 120px;
 }
 
 .feature__item h5 {
@@ -2697,9 +2706,6 @@ ol {
 }
 
 @media (min-width: 576px) {
-  .feature__item.right-column {
-    margin-top: 120px !important;
-  }
   .team__all {
     text-align: right !important;
     margin-bottom: 0 !important;

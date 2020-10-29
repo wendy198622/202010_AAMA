@@ -318,16 +318,18 @@
 }
 
 .pricing__item {
-  background: $secondary-color;
+  // background: $secondary-color;
   text-align: center;
-  padding: 20px;
+  // padding: 20px;
   margin-bottom: 40px;
-  width: 240px;
-  height: 240px;
-  box-sizing: border-box;
+  // width: 120px;
+  // height: 120px;
+  // box-sizing: border-box;
   position: relative;
   // margin-top: 45px;
-  @include border-radius(100%);
+  // -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  // clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  // @include border-radius(10px);
 
   // &:hover {
   //   background: rgba(12, 43, 75, 1);
@@ -368,17 +370,33 @@
     }
 
     h2 {
-      font-size: 50px;
-      color: $white-color;
-      font-weight: 700;
-      margin-top: 4px;
-      margin-bottom: 18px;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      .countBox{
+        line-height: 120px;
+        margin-top: 4px;
+        margin-bottom: 18px;
+        background: url(../img/count_bg.svg) center center no-repeat;
+        background-size: contain;
+        .counter{
+          font-size: 40px;
+          color: $white-color;
+          font-weight: 700;
+          display: inline-block;
+        }
+        span{ 
+          margin-left: 2px;
+          font-size: 16px;
+        }
+      }
     }
 
     h6 {
-      color: $white-color;
+      color: $heading-color-2;
       font-weight: 700;
       text-transform: uppercase;
+      margin-top: 40px;
       @include transition(all, .3s);
     }
   }
